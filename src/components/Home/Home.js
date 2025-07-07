@@ -1,17 +1,22 @@
 import React from "react";
-import StoryReel from "./StoryReel";
-import PostCard from "./PostCard";
-import DailyChallenge from "./DailyChallenge";
-import ShoutPrompt from "./ShoutPrompt";
+import StoryReel from "./components/StoryReel";
+import PostCard from "./components/PostCard";
+import DailyChallenge from "./components/DailyChallenge";
+import ShoutPrompt from "./components/ShoutPrompt";
 
 function Home() {
   return (
-    <div className="max-w-2xl mx-auto py-6">
+    <div className="max-w-2xl mx-auto py-6 space-y-4">
+      {/* Top Story Rings */}
       <StoryReel />
+
+      {/* Post Prompt */}
       <ShoutPrompt />
+
+      {/* Daily Challenge Prompt */}
       <DailyChallenge />
-      
-      {/* Example posts (mock data for now) */}
+
+      {/* Example Post Cards */}
       <PostCard
         username="Devraj 🔱"
         content="Sometimes silence is louder than shouting."

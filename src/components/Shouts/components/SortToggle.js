@@ -1,23 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
-function SortToggle({ onChange }) {
-  const [sortBy, setSortBy] = useState("recent");
-
-  const toggleSort = () => {
-    const newSort = sortBy === "recent" ? "soulpower" : "recent";
-    setSortBy(newSort);
-    if (onChange) onChange(newSort);
-  };
-
+function SortToggle() {
   return (
-    <div className="flex justify-end mb-4">
-      <button
-        onClick={toggleSort}
-        className="text-sm px-3 py-1 bg-gray-200 rounded hover:bg-gray-300"
-      >
-        Sort by: {sortBy === "recent" ? "🕒 Recent" : "💫 Soulpower"}
-      </button>
-    </div>
+    <select className="bg-white dark:bg-gray-800 border px-3 py-1 rounded text-sm">
+      <option value="recent">🕐 Recent</option>
+      <option value="soul">💚 Soulful</option>
+      <option value="shadow">🖤 Shadowed</option>
+    </select>
   );
 }
 

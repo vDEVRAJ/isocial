@@ -1,3 +1,9 @@
+/* index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 👇 Add this custom style */
+body {
+  @apply bg-black text-white;
+}
